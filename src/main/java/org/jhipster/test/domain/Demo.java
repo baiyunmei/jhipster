@@ -5,3 +5,5 @@ package org.jhipster.test.domain;
  */
 public class Demo {
 }
+
+//添加抽奖功能
