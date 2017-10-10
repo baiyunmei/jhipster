@@ -5,3 +5,4 @@ package org.jhipster.test.domain;
  */
 public class Demo {
 }
+//注释
