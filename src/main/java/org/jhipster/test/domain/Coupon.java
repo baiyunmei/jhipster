@@ -11,6 +11,7 @@ import java.util.Objects;
  * A Coupon.
  */
 //新增实体类
+    //新增抽奖功能
 @Entity
 @Table(name = "coupon")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
