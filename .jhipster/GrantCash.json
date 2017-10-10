@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "packId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "useTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "getTime",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "packName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "packPrice",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "orderId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "expiry",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170927014612",
+    "entityTableName": "grant_cash",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

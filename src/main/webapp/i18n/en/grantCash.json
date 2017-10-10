@@ -1,0 +1,29 @@
+{
+    "jhipsterApp": {
+        "grantCash" : {
+            "home": {
+                "title": "Grant Cashes",
+                "createLabel": "Create a new Grant Cash",
+                "createOrEditLabel": "Create or edit a Grant Cash"
+            },
+            "created": "A new Grant Cash is created with identifier {{ param }}",
+            "updated": "A Grant Cash is updated with identifier {{ param }}",
+            "deleted": "A Grant Cash is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Grant Cash {{ id }}?"
+            },
+            "detail": {
+                "title": "Grant Cash"
+            },
+            "packId": "Pack Id",
+            "userId": "User Id",
+            "useTime": "Use Time",
+            "getTime": "Get Time",
+            "status": "Status",
+            "packName": "Pack Name",
+            "packPrice": "Pack Price",
+            "orderId": "Order Id",
+            "expiry": "Expiry"
+        }
+    }
+}

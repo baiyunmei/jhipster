@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "cashName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "number",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "reason",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "Long"
+        }
+    ],
+    "changelogDate": "20170926103932",
+    "entityTableName": "coupon",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

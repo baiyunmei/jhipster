@@ -1,0 +1,91 @@
+
+<div>
+    <h2 data-translate="jhipsterApp.coupon.home.title">Coupons</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="coupon.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="jhipsterApp.coupon.home.createLabel">
+                        Create new Coupon
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!--------------------------------------------------------------->
+    <div class="row">
+        <input type="number"  class="hidden" name="longitude" ng-model="vm.longitude" id="field_longitude"/>
+        <input type="number"  class="hidden" name="latitude" ng-model="vm.latitude" id="field_latitude" />
+
+        <div class="col-xs-1 no-padding-left">
+            <input type="text" class="form-control"  placeholder="名字" ng-model="vm.cashName" required>
+        </div>
+        <div class="col-xs-1 no-padding-left">
+            <input type="text" class="form-control"  placeholder="数量" ng-model="vm.number" required>
+        </div>
+        <div class="col-xs-1 no-padding-left">
+            <input type="text" class="form-control"  placeholder="时间" ng-model="vm.time" required>
+        </div>
+
+        <div class="form-group" display="none">
+            <button class="btn btn-primary" ng-click="vm.loadAll(1)">
+                    <span>
+                        搜索
+                    </span>
+            </button>
+        </div>
+        <br/>
+        <!--------------------------------------------------------------->
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cashName"><span data-translate="jhipsterApp.coupon.cashName">Cash Name</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="number"><span data-translate="jhipsterApp.coupon.number">Number</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="reason"><span data-translate="jhipsterApp.coupon.reason">Reason</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="time"><span data-translate="jhipsterApp.coupon.time">Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="coupon in vm.coupons track by coupon.id">
+                    <td><a ui-sref="coupon-detail({id:coupon.id})">{{coupon.id}}</a></td>
+                    <td>{{coupon.cashName}}</td>
+                    <td>{{coupon.number}}</td>
+                    <td>{{coupon.reason}}</td>
+                    <td>{{coupon.time}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="coupon-detail({id:coupon.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="coupon.edit({id:coupon.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="coupon.delete({id:coupon.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+        <uib-pagination class="pagination-sm" total-items="vm.totalItems" items-per-page="vm.itemsPerPage" ng-model="vm.page" ng-change="vm.transition()"></uib-pagination>
+    </div>
+</div>
+

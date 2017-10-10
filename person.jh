@@ -1,0 +1,9 @@
+entity Person {
+		name String,
+		age int,
+		salary String
+}
+
+paginate Person with pagination
+
+service Person with serviceImpl

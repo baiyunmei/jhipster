@@ -1,0 +1,80 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myGrantCashLabel" data-translate="jhipsterApp.grantCash.home.createOrEditLabel">Create or edit a Grant Cash</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.grantCash.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.grantCash.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.packId" for="field_packId">Pack Id</label>
+            <input type="number" class="form-control" name="packId" id="field_packId"
+                    ng-model="vm.grantCash.packId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.userId" for="field_userId">User Id</label>
+            <input type="number" class="form-control" name="userId" id="field_userId"
+                    ng-model="vm.grantCash.userId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.useTime" for="field_useTime">Use Time</label>
+            <input type="number" class="form-control" name="useTime" id="field_useTime"
+                    ng-model="vm.grantCash.useTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.getTime" for="field_getTime">Get Time</label>
+            <input type="number" class="form-control" name="getTime" id="field_getTime"
+                    ng-model="vm.grantCash.getTime"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.status" for="field_status">Status</label>
+            <input type="number" class="form-control" name="status" id="field_status"
+                    ng-model="vm.grantCash.status"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.packName" for="field_packName">Pack Name</label>
+            <input type="text" class="form-control" name="packName" id="field_packName"
+                    ng-model="vm.grantCash.packName"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.packPrice" for="field_packPrice">Pack Price</label>
+            <input type="number" class="form-control" name="packPrice" id="field_packPrice"
+                    ng-model="vm.grantCash.packPrice"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.orderId" for="field_orderId">Order Id</label>
+            <input type="number" class="form-control" name="orderId" id="field_orderId"
+                    ng-model="vm.grantCash.orderId"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="jhipsterApp.grantCash.expiry" for="field_expiry">Expiry</label>
+            <input type="number" class="form-control" name="expiry" id="field_expiry"
+                    ng-model="vm.grantCash.expiry"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span data-translate="jhipsterApp.grantCash.detail.title">Grant Cash</span> {{vm.grantCash.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="jhipsterApp.grantCash.packId">Pack Id</span></dt>
+        <dd>
+            <span>{{vm.grantCash.packId}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterApp.grantCash.userId">User Id</span></dt>
+        <dd>
+            <span>{{vm.grantCash.userId}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterApp.grantCash.useTime">Use Time</span></dt>
+        <dd>
+            <span>{{vm.grantCash.useTime}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterApp.grantCash.getTime">Get Time</span></dt>
+        <dd>
+            <span>{{vm.grantCash.getTime}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterApp.grantCash.status">Status</span></dt>
+        <dd>
+            <span>{{vm.grantCash.status}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterApp.grantCash.packName">Pack Name</span></dt>
+        <dd>
+            <span>{{vm.grantCash.packName}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterApp.grantCash.packPrice">Pack Price</span></dt>
+        <dd>
+            <span>{{vm.grantCash.packPrice}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterApp.grantCash.orderId">Order Id</span></dt>
+        <dd>
+            <span>{{vm.grantCash.orderId}}</span>
+        </dd>
+        <dt><span data-translate="jhipsterApp.grantCash.expiry">Expiry</span></dt>
+        <dd>
+            <span>{{vm.grantCash.expiry}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="grant-cash-detail.edit({id:vm.grantCash.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
