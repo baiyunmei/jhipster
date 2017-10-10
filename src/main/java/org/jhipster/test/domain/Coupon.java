@@ -10,6 +10,7 @@ import java.util.Objects;
 /**
  * A Coupon.
  */
+//新增实体类
 @Entity
 @Table(name = "coupon")
 @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
